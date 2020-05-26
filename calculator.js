@@ -63,7 +63,6 @@ function soln() {
             }
 
         }
-        alert(elements);
         for (var i = 0; i < elements.length; i++) {
             if (elements[i] === "/") {
                 var a = parseInt(elements[i - 1]) / parseInt(elements[i + 1]);
@@ -93,20 +92,28 @@ function soln() {
                 var s = elements[1];
                 if (s === "/") {
                     var e = parseInt(elements[0]) / parseInt(elements[2]);
-                    elements[1] = e;
+                    elements[0] = e;
+                    elements.pop();
+                    elements.pop();
                 } else if (s === "*") {
                     var e = parseInt(elements[0]) * parseInt(elements[2]);
-                    elements[1] = e;
+                    elements[0] = e;
+                    elements.pop();
+                    elements.pop();
                 } else if (s === "+") {
                     var e = parseInt(elements[0]) + parseInt(elements[2]);
-                    elements[1] = e;
+                    elements[0] = e;
+                    elements.pop();
+                    elements.pop();
                 } else if (s === "-") {
                     var e = parseInt(elements[0]) - parseInt(elements[2]);
-                    elements[1] = e;
+                    elements[0] = e;
+                    elements.pop();
+                    elements.pop();
                 }
             }
         }
-        input.value = elements[1];
+        input.value = elements[0];
     } else {
         alert("Such expression is not Allowed");
     }
