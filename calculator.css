@@ -69,7 +69,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    width: 300px;
+    width: 400px;
     text-align: center;
 }
 
@@ -83,7 +83,6 @@ input {
     border: 2px solid white;
     background: none;
     display: block;
-    cursor: pointer;
     border-radius: 50px;
 }
 
